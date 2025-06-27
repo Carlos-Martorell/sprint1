@@ -105,6 +105,7 @@ body {
 
 .div__sections {
   padding: 2rem 1.5rem;
+  margin-top: 70px;
 }
 
 .manager {
@@ -246,6 +247,134 @@ body {
     display: grid;
   }
 
+/****************Features en layout*/
+
+.features {
+  margin-top: 100px;
+}
+
+.features__title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+.features__description {
+  text-align: center;
+  color: hsl(229, 8%, 45%);
+  line-height: 1.6;
+  font-size: 1.25rem;
+  max-width: 45ch;
+  margin: 1rem auto 2.5rem;
+  padding-inline: 1.5rem;
+}
+
+
+
+.features__tabs input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+
+.features__tabs {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid hsl(229, 8%, 85%);
+  margin-bottom: 2rem;
+}
+
+
+.features__tab {
+  position: relative;
+  padding: 1rem 0;
+  text-align: center;
+  cursor: pointer;
+  color: hsl(229, 8%, 45%);
+  font-weight: 500;
+  border-bottom: 1px solid hsl(229, 8%, 85%);
+  transition: color 0.3s;
+}
+
+
+.features__tab::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: 0%;
+  height: 4px;
+  background-color: hsl(0, 94%, 66%);
+  transform: translateX(-50%);
+  transition: width 0.3s, left 0.3s;
+}
+
+
+#tab1:checked ~ label[for="tab1"],
+#tab2:checked ~ label[for="tab2"],
+#tab3:checked ~ label[for="tab3"] {
+  color: hsl(229, 31%, 21%);
+}
+#tab1:checked ~ label[for="tab1"]::after,
+#tab2:checked ~ label[for="tab2"]::after,
+#tab3:checked ~ label[for="tab3"]::after {
+  width: 100%;
+}
+
+
+.features__panel {
+  display: none;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  gap: 2rem;
+}
+
+
+#tab1:checked ~ #panel-bookmark,
+#tab2:checked ~ #panel-search,
+#tab3:checked ~ #panel-sharing {
+  display: grid;   
+}
+
+.features__panel h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 auto 1rem;
+  max-width: 45ch;
+}
+
+
+.features__panel p {
+  text-align: center;
+  color: hsl(229, 8%, 45%);
+  line-height: 1.6;
+  font-size: 1.25rem;
+  max-width: 45ch;
+  margin: 0 auto 1.5rem;
+  padding-inline: 1.5rem;
+}
+
+
+.features__tab-button {
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.features__tab-button:hover {
+  transform: translateY(-3px);
+}
 
 
 
