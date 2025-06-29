@@ -8,6 +8,7 @@
 body {
     font-family: 'Rubik', sans-serif;
     max-width: 1200px;
+    margin-top: 60px;
     }
 
 
@@ -288,6 +289,7 @@ body {
   flex-direction: column;
   border-bottom: 1px solid hsl(229, 8%, 85%);
   margin-bottom: 2rem;
+
 }
 
 
@@ -333,6 +335,7 @@ body {
   padding: 2rem 1.5rem;
   text-align: center;
   gap: 2rem;
+  margin: auto;
 }
 
 

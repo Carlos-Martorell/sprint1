@@ -1,0 +1,22 @@
+
+@use '../abstracts/variables' as v;
+
+%info-section {
+    text-align: center;
+  
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 0 auto;
+    }
+  
+    p {
+      color: v.$color-grey; 
+      line-height: 1.6;
+      font-size: 1.25rem;
+      max-width: 45ch;
+      margin: 1rem auto 2.5rem;
+      padding-inline: 1.5rem;
+    }
+  }
+  
