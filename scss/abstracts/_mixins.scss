@@ -14,3 +14,9 @@
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
   }
+
+  @mixin full-width-section {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden; // solo si necesitas evitar microdesbordamientos
+  }

@@ -5,9 +5,13 @@
   padding: 0;
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
     font-family: 'Rubik', sans-serif;
-    max-width: 1200px;
     margin-top: 60px;
     }
 
@@ -126,7 +130,7 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto; 
   
 }
 
@@ -145,21 +149,20 @@ body {
   margin: 0 auto; 
   max-width: clamp(50px, 90vw, 600px);
 }
-
-.manager__backimage {
-  width: 100%;
+/*  imagen generada para fondo manager__image */
+.manager__visual::after {
+  content: "";
+  display: block;
   position: absolute;
-  width: 85%;
-  transform: translateX(10%);
-  bottom: 0;
-  right: 0;
-  height: 70%;
+  top: 20%;
+  left: 15%;
+  width: 100%;
+  height: 85%;
   background-color: hsl(231, 69%, 60%);
-  border-radius: 100px 0 0 100px;
-  z-index: 1;
-
+  border-top-left-radius: 8rem;
+  border-bottom-left-radius: 8rem;
+  z-index: -1;
 }
-
 
 .manager__content {
   display: grid;
