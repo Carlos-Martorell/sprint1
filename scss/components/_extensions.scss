@@ -23,8 +23,8 @@
     }
     
   
-    &__chrome {
-      background-color: #fff;
+    &__browser {
+      background-color: v.$color-light;
       border-radius: 0.75rem;
       padding: 2rem;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -40,7 +40,7 @@
       }
   
       p {
-        color: grey;
+        color: v.$color-grey;
         font-size: 0.9rem;
       }
     }

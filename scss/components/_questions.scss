@@ -24,7 +24,7 @@
 }
 
 .question {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid v.$color-light;
   padding: 1.25rem 0;
 
   &__title {
@@ -39,10 +39,6 @@
       transition: transform 0.3s ease, filter 0.3s ease;
     }
 
-    &.active .question__icon {
-      transform: rotate(180deg);
-      filter: hue-rotate(150deg); // de azul a rojo
-    }
   }
 
   &__toggle {
@@ -67,13 +63,6 @@
     font-size: 0.95rem;
     color: v.$color-grey;
     line-height: 1.5;
-
-    &.active {
-      max-height: 250px; 
-      margin-top: 0.75rem;
-    }
-
-
     
     @media (min-width: 768px) {
         max-width: 900px;

@@ -4,7 +4,7 @@
 
 
 .footer {
-    color: white;
+    color: v.$color-light;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -55,7 +55,7 @@
         }
   
         button {
-          @include m.button-style(v.$color-coral, white);
+          @include m.button-style(v.$color-coral, v.$color-light);
           border-radius: 0.5rem;
           width: 100%;
   
@@ -130,7 +130,7 @@
             }
       
             .footer__item {
-              color: white;
+              color: v.$color-light;
               text-decoration: none;
               font-weight: 300;
               font-size: 0.9rem;
