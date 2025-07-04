@@ -20,9 +20,9 @@
             </label>
 
             <!-- Menú desplegable (versión móvil) -->
-            <div class="hidden fixed inset-0 bg-blue-900 flex-col items-center justify-center text-white peer-checked:block transition-transform duration-300 ease-in-out transform origin-top-right scale-0 peer-checked:scale-100">
-                <!-- Logo -->
-                <img src="../img/logo-bookmark.svg" alt="logo bookmark" class="w-32 mb-8">
+            <div class="fixed inset-0 bg-blue-900 flex-col items-center justify-center text-white opacity-0 scale-0 peer-checked:opacity-100 peer-checked:scale-100 transition all duration-1000 ease-in-out transform origin-top-right">
+<!-- Logo -->
+                <img src="../img/logo-bookmark-white.png" alt="logo bookmark" class="m-5 w-37 mb-20">
 
                 <!-- Botón para cerrar el menú -->
                 <label for="menu-toggle" class="absolute top-6 right-6 cursor-pointer">
@@ -32,21 +32,21 @@
                 <!-- Lista de enlaces -->
                 <ul class="text-lg space-y-6 w-full text-center border-t border-white pt-6">
                     <li class="border-b border-white pb-2">
-                        <a href="#" class="hover:text-coral transition-colors duration-300">FEATURES</a>
+                        <a href="#" class="hover:text-red-400 transition-colors duration-300 ease-in-out">FEATURES</a>
                     </li>
                     <li class="border-b border-white pb-2">
-                        <a href="#" class="hover:text-coral transition-colors duration-300">PRICING</a>
+                        <a href="#" class="hover:text-red-400 transition-colors duration-300 ease-in-out">PRICING</a>
                     </li>
                     <li class="border-b border-white pb-2">
-                        <a href="#" class="hover:text-coral transition-colors duration-300">CONTACT</a>
+                        <a href="#" class="hover:text-red-400 transition-colors duration-300 ease-in-out">CONTACT</a>
                     </li>
                     <li>
-                        <a href="#" class="text-red-500 hover:text-coral transition-colors duration-300">LOGIN</a>
+                        <a href="#" class="hover:text-red-400 transition-colors duration-300 ease-in-out">LOGIN</a>
                     </li>
                 </ul>
 
                 <!-- Redes sociales -->
-                <div class="flex space-x-4 mt-8">
+                <div class="flex space-x-4 mt-8 justify-center items-center">
                     <img src="../img/icon-facebook.svg" alt="Facebook" class="w-6 h-6 hover:opacity-75 transition-opacity duration-300">
                     <img src="../img/icon-twitter.svg" alt="Twitter" class="w-6 h-6 hover:opacity-75 transition-opacity duration-300">
                 </div>
@@ -56,19 +56,18 @@
         <!-- Navegación (versión desktop) -->
         <nav class="hidden md:flex space-x-6 items-center">
             <ul class="flex space-x-6 text-gray-700">
-                <!-- Enlaces con subrayado coral al hacer hover -->
                 <li class="relative">
-                    <a href="#" class="hover:text-gray-700 after:absolute after:left-1/2 after:top-full after:w-0 after:h-0.5 after:bg-coral after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:left-0">
+                    <a href="#" class="relative hover:text-gray-700 after:absolute after:left-1/2 after:bottom-[-4px] after:translate-x-[-50%] after:w-0 after:h-[2px] after:bg-red-500 after:transition-all after:duration-500 after:ease-in-out hover:after:w-full">
                         FEATURES
                     </a>
                 </li>
                 <li class="relative">
-                    <a href="#" class="hover:text-gray-700 after:absolute after:left-1/2 after:top-full after:w-0 after:h-0.5 after:bg-coral after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:left-0">
+                    <a href="#" class="relative hover:text-gray-700 after:absolute after:left-1/2 after:bottom-[-4px] after:translate-x-[-50%] after:w-0 after:h-[2px] after:bg-red-500 after:transition-all after:duration-500 after:ease-in-out hover:after:w-full">
                         PRICING
                     </a>
                 </li>
                 <li class="relative">
-                    <a href="#" class="hover:text-gray-700 after:absolute after:left-1/2 after:top-full after:w-0 after:h-0.5 after:bg-coral after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:left-0">
+                    <a href="#" class="relative hover:text-gray-700 after:absolute after:left-1/2 after:bottom-[-4px] after:translate-x-[-50%] after:w-0 after:h-[2px] after:bg-red-500 after:transition-all after:duration-500 after:ease-in-out hover:after:w-full">
                         CONTACT
                     </a>
                 </li>
@@ -80,19 +79,32 @@
             </button>
         </nav>
     </header>
-    <div class=" text-white p-4">Tailwind está funcionando</div>
-    <div class="div__sections">
-        <section class="manager">
-            <div class="manager__visual">
-                <div class="manager__image"><img src="../img/illustration-hero.svg" alt="ejemplo desktop"></div>
-                <div class="manager__backimage"></div>
+   
+    <div class="div__sections p-8">
+        <section class="manager grid grid-cols-1 mb-10 md:grid-cols-2 gap-8 md:gap-y-5 items-center max-w-[1200px]">
+            <!-- Visual -->
+            <div class="manager__visual relative w-full mx-auto z-10 order-1 md:order-2">
+                <div class="manager__image relative w-full max-w-[600px] mx-auto">
+                    <img src="../img/illustration-hero.svg" alt="ejemplo desktop" class="w-full h-auto block">
+                </div>
+                <!-- Fondo detrás de la imagen -->
+                <div class="absolute top-[20%] left-[15%] w-full h-[85%] bg-indigo-500 rounded-tl-[8rem] rounded-bl-[8rem] -z-10"></div>
             </div>
-            <div class="manager__content">
-                <div class="manager__title">A Simple Bookmark Manager</div>
-                <div class="manager__text">A clean and simple interface to organize your favorite websites. Open a new browser tab and see your sites load instantly. Try it for free.</div>
-                <div class="manager__browsers">
-                    <button class="manager__chrome">Get it on Chrome</button>
-                    <button class="manager__Firefox">Get it on Firefox</button>
+
+            <!-- Contenido -->
+            <div class="manager__content grid gap-8 px-8 text-center md:text-left order-2 md:order-1">
+                <h1 class="text-4xl font-semibold mt-10 text-center md:text-left">A Simple Bookmark Manager</h1>
+
+                <p class="text-gray-500 leading-relaxed text-lg max-w-[55ch] mx-auto md:mx-0 text-center md:text-left">
+                A clean and simple interface to organize your favorite websites. Open a new browser tab and see your sites load instantly. Try it for free.
+                </p>
+                <div class="manager__browsers flex gap-6 justify-center md:justify-start">
+                    <button class="manager__chrome bg-indigo-500 text-white font-medium px-6 py-3 rounded hover:-translate-y-1 transition-transform duration-200">
+                        Get it on Chrome
+                    </button>
+                    <button class="manager__Firefox bg-gray-300 text-gray-800 font-normal px-6 py-3 rounded hover:-translate-y-1 transition-transform duration-200">
+                        Get it on Firefox
+                    </button>
                 </div>
             </div>
         </section>
