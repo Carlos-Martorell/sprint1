@@ -81,7 +81,7 @@
     </header>
    
     <div class="div__sections p-8">
-        <section class="manager grid grid-cols-1 mb-10 md:grid-cols-2 gap-8 md:gap-y-5 items-center max-w-[1200px]">
+        <section class="manager grid grid-cols-1 mb-5 md:grid-cols-2 gap-8 md:gap-y-5 items-center max-w-[1200px]">
             <!-- Visual -->
             <div class="manager__visual relative w-full mx-auto z-10 order-1 md:order-2">
                 <div class="manager__image relative w-full max-w-[600px] mx-auto">
@@ -93,7 +93,7 @@
 
             <!-- Contenido -->
             <div class="manager__content grid gap-8 px-8 text-center md:text-left order-2 md:order-1">
-                <h1 class="text-4xl font-semibold mt-10 text-center md:text-left">A Simple Bookmark Manager</h1>
+                <h1 class="text-3xl font-semibold mt-10 text-center md:text-left">A Simple Bookmark Manager</h1>
 
                 <p class="text-gray-500 leading-relaxed text-lg max-w-[55ch] mx-auto md:mx-0 text-center md:text-left">
                 A clean and simple interface to organize your favorite websites. Open a new browser tab and see your sites load instantly. Try it for free.
@@ -108,49 +108,109 @@
                 </div>
             </div>
         </section>
-        <section class="features">
-            <h2 class="features__title">Features</h2>
-            <p class="features__description">
-                Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.
+        <section class="mt-15 max-w-[850px] min-w-[400px] mx-auto px-6">
+            <!-- Título principal -->
+            <h2 class="text-center text-3xl font-semibold mb-4">Features</h2>
+          
+            <!-- Descripción -->
+            <p class="text-center text-gray-500 leading-relaxed text-lg max-w-[45ch] mx-auto mb-3 px-6">
+              Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.
             </p>
-            <div class="features__tabs">
-                <input type="radio" name="feature" id="tab1" checked>
-                <input type="radio" name="feature" id="tab2">
-                <input type="radio" name="feature" id="tab3">
-                
-                <label for="tab1" class="features__tab">Simple Bookmarking</label>
-                <label for="tab2" class="features__tab">Speedy Searching</label>
-                <label for="tab3" class="features__tab">Easy Sharing</label>
-                
-                <div class="features__panel" id="panel-bookmark">
-               
-                    <div><img src="../img/illustration-features-tab-1.svg" alt="ilustration simply bookmarking"></div>
-                    <div>
-                    <h3>Bookmark in one click</h3>
-                    <p>
-                        Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.</p>
-                    <button class="features__tab-button">More info</button></div>
-                </div>
+          
             
-                <div class="features__panel" id="panel-search">
-                    <div><img src="../img/illustration-features-tab-2.svg" alt="ilustration searching"></div>
-                    <div>
-                    <h3>Intelligent search</h3>
-                    <p>
-                        Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-                    <button class="features__tab-button">More info</button></div>
+            <!-- Tabs + Inputs -->
+            <div class="grid md:grid-cols-3 md:grid-rows-[auto_1fr] gap-y-8 md:pb-8 md:mb-12 relative">
+                <input type="radio" name="feature" id="tab1" checked class="peer/tab1 hidden" />
+                <input type="radio" name="feature" id="tab2" class="peer/tab2 hidden" />
+                <input type="radio" name="feature" id="tab3" class="peer/tab3 hidden" />
+
+                <div class="w-full flex flex-col md:flex-row items-center justify-center text-center col-span-3">
+                    <label for="tab1"
+              class="flex-1 min-w-0 text-gray-500 font-medium py-4 text-center cursor-pointer relative hover:text-gray-700
+                     whitespace-nowrap
+                     border-b border-gray-400 
+                     after:absolute after:left-1/2 after:bottom-[-1px] after:translate-x-[-50%]
+                     after:w-0 after:h-[2px] after:bg-red-500
+                     after:transition-all after:duration-500 after:ease-in-out hover:after:w-full
+                     peer-checked:text-gray-900 peer-checked:after:w-full">
+              Simple Bookmarking
+                    </label>
+          
+                    <label for="tab2"
+              class="flex-1 min-w-0 text-gray-500 font-medium py-4 text-center cursor-pointer relative hover:text-gray-700
+                     whitespace-nowrap
+                     border-b border-gray-400 
+                     after:absolute after:left-1/2 after:bottom-[-1px] after:translate-x-[-50%]
+                     after:w-0 after:h-[2px] after:bg-red-500
+                     after:transition-all after:duration-500 after:ease-in-out hover:after:w-full
+                     peer-checked:text-gray-900 peer-checked:after:w-full">
+              Speedy Searching
+                    </label>
+          
+                    <label for="tab3"
+              class="flex-1 min-w-0 text-gray-500 font-medium py-4 text-center cursor-pointer relative hover:text-gray-700
+                     whitespace-nowrap
+                     border-b border-gray-400
+                     after:absolute after:left-1/2 after:bottom-[-1px] after:translate-x-[-50%]
+                     after:w-0 after:h-[2px] after:bg-red-500
+                     after:transition-all after:duration-500 after:ease-in-out hover:after:w-full
+                     peer-checked:text-gray-900 peer-checked:after:w-full">
+              Easy Sharing
+                    </label>
+              </div>
+          <!-- Panel 1 -->
+            <div id="panel-bookmark" class="hidden peer-checked/tab1:grid col-span-3 grid-cols-1 md:grid-cols-2 items-center gap-12 text-center md:text-left p-8 md:p-16">
+                <div>
+                <img src="../img/illustration-features-tab-1.svg" alt="ilustration simply bookmarking" class="w-full h-auto" />
                 </div>
-            
-                <div class="features__panel" id="panel-sharing">
-                    <div><img src="../img/illustration-features-tab-3.svg" alt="ilustration sharing"></div>
-                    <div>
-                    <h3>Share your bookmarks</h3>
-                    <p>
-                        Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-                    <button class="features__tab-button">More info</button></div>
+                <div>
+                <h3 class="text-2xl font-semibold mb-4 max-w-[45ch] mx-auto md:mx-0">Bookmark in one click</h3>
+                <p class="text-gray-500 text-lg leading-relaxed max-w-[45ch] mx-auto md:mx-0 mb-6 px-6 md:px-0">
+                    Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.
+                </p>
+                <button class="bg-blue-600 text-white font-medium rounded px-6 py-3 transition-transform duration-200 hover:-translate-y-1 mt-4">
+                    More info
+                </button>
                 </div>
             </div>
-            </section>
+        
+            <!-- Panel 2 -->
+            <div id="panel-search" class="hidden peer-checked/tab2:grid col-span-3 grid-cols-1 md:grid-cols-2 items-center gap-12 text-center md:text-left p-8 md:p-16">
+                <div>
+                <img src="../img/illustration-features-tab-2.svg" alt="ilustration searching" class="w-full h-auto" />
+                </div>
+                <div>
+                <h3 class="text-2xl font-semibold mb-4 max-w-[45ch] mx-auto md:mx-0">Intelligent search</h3>
+                <p class="text-gray-500 text-lg leading-relaxed max-w-[45ch] mx-auto md:mx-0 mb-6 px-6 md:px-0">
+                    Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
+                </p>
+                <button class="bg-blue-600 text-white font-medium rounded px-6 py-3 transition-transform duration-200 hover:-translate-y-1 mt-4">
+                    More info
+                </button>
+                </div>
+            </div>
+        
+            <!-- Panel 3 -->
+            <div id="panel-sharing" class="hidden peer-checked/tab3:grid col-span-3 grid-cols-1 md:grid-cols-2 items-center gap-12 text-center md:text-left p-8 md:p-16">
+                <div>
+                <img src="../img/illustration-features-tab-3.svg" alt="ilustration sharing" class="w-full h-auto" />
+                </div>
+                <div>
+                <h3 class="text-2xl font-semibold mb-4 max-w-[45ch] mx-auto md:mx-0">Share your bookmarks</h3>
+                <p class="text-gray-500 text-lg leading-relaxed max-w-[45ch] mx-auto md:mx-0 mb-6 px-6 md:px-0">
+                    Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
+                </p>
+                <button class="bg-blue-600 text-white font-medium rounded px-6 py-3 transition-transform duration-200 hover:-translate-y-1 mt-4">
+                    More info
+                </button>
+                </div>
+             </div>
+            </div>
+
+        </div>
+
+          </section>
+          
             <section class="extensions"> 
                 <div class="extensions__info"> 
                     <h2>Download the extension</h2> 
