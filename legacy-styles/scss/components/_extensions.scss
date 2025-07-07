@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/placeholders';
+@use '../abstracts/mixins' as m;
+
+
+
+.extensions {
+    padding: 4rem 2rem;
+    text-align: center;
+
+    &__info {
+      @extend %info-section;
+    }
+
+    &__panel {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+    }
+    
+  
+    &__browser {
+      background-color: v.$color-light;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      width: 100%;
+  
+      img {
+        width: 50px;
+      }
+  
+      h3 {
+        margin: 1.5rem 0 0.5rem;
+      }
+  
+      p {
+        color: v.$color-grey;
+        font-size: 0.9rem;
+      }
+    }
+  
+    .extensions__button {
+      margin-top: 1.5rem;
+      @include m.button-style;
+    }
+    
+  
+}

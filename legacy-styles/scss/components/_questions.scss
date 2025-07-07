@@ -1,0 +1,72 @@
+
+@use '../abstracts/placeholders';
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.questions {
+  padding: 4rem 2rem;
+  text-align: center;
+
+  &__info {
+    @extend %info-section;
+  }
+
+  &__panel {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  &__button {
+    margin-top: 2rem;
+    @include m.button-style;
+  }
+}
+
+.question {
+  border-bottom: 1px solid v.$color-light;
+  padding: 1.25rem 0;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+
+    .question__icon {
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+  }
+
+  &__toggle {
+    display: none;
+  }
+
+  &__toggle:checked ~ .question__answer {
+    max-height: 250px;
+    margin-top: 0.75rem;
+  }
+  
+  &__toggle:checked ~ .question__title .question__icon {
+    transform: rotate(180deg);
+    filter: hue-rotate(150deg);
+  }
+  
+
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    font-size: 0.95rem;
+    color: v.$color-grey;
+    line-height: 1.5;
+    
+    @media (min-width: 768px) {
+        max-width: 900px;
+        margin-inline: auto;
+    }
+    }
+}

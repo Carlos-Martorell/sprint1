@@ -1,0 +1,168 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/placeholders';
+@use '../abstracts/mixins' as m;
+
+
+.footer {
+    color: v.$color-light;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  
+
+    .email {
+      background-color: v.$color-primary;
+      padding: 3rem 1.5rem;
+      display: grid;
+      gap: 2rem;
+      justify-items: center;
+  
+      &__info {
+        display: grid;
+
+        gap: 0.5rem;
+        max-width: 50ch;
+  
+        p {
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-size: 0.8rem;
+          color: v.$color-grey-light;
+        }
+  
+        h3 {
+          font-size: 1.25rem;
+        }
+      }
+  
+      &__panel {
+        display: grid;
+        gap: 1rem;
+        width: 100%;
+        max-width: 400px;
+  
+        @media (min-width: 768px) {
+          grid-template-columns: 1fr auto;
+          align-items: center;
+          gap: 0.75rem;
+        }
+  
+        .email__input {
+          padding: 0.75rem;
+          border: none;
+          border-radius: 0.3rem;
+          font-size: 0.95rem;
+        }
+  
+        button {
+          @include m.button-style(v.$color-coral, v.$color-light);
+          border-radius: 0.5rem;
+          width: 100%;
+  
+          @media (min-width: 768px) {
+            width: auto;
+            padding-inline: 2rem;
+          }
+        }
+      }
+    }
+  
+
+
+    //////////////////////////
+ 
+ 
+ 
+    .nav {
+        background-color: v.$color-dark-blue;
+        width: 100%;
+        padding: 3rem;
+      
+
+        &__container {
+            display: grid;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            min-width: 0;
+            margin: 0 auto;
+            padding-inline: 1.5rem; 
+            justify-items: center;
+            text-align: center;
+          
+            @media (min-width: 768px) {
+              grid-template-columns: 1fr auto;
+              align-items: center;
+              justify-content: space-between;
+              text-align: left;
+              padding-inline: 3rem; 
+            }
+          }
+      
+        &__list {
+          display: grid;
+          gap: 2rem;
+          justify-items: center;
+          min-width: 0;
+      
+          @media (min-width: 768px) {
+            grid-auto-flow: column;
+            gap: 3rem;
+            align-items: center;
+            justify-content: start;
+          }
+      
+          .footer__logo {
+            width: 140px;
+            max-width: 100%;
+            display: block;
+          }
+      
+          .nav__items {
+            list-style: none;
+            display: grid;
+            gap: 1rem;
+            padding: 0;
+      
+            @media (min-width: 768px) {
+              grid-auto-flow: column;
+              gap: 2rem;
+            }
+      
+            .footer__item {
+              color: v.$color-light;
+              text-decoration: none;
+              font-weight: 300;
+              font-size: 0.9rem;
+              letter-spacing: 0.05em;
+              transition: color 0.3s ease;
+      
+              &:hover {
+                color: v.$color-coral;
+              }
+            }
+          }
+        }
+      
+        &__icons {
+          display: grid;
+          grid-auto-flow: column;
+          min-width: 0;
+          gap: 1.5rem;
+          justify-content: center;
+      
+          img {
+            width: 24px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+      
+            &:hover {
+              transform: translateY(-3px);
+            }
+          }
+        }
+      }
+      
+  }
+  
